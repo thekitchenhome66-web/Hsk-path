@@ -1,0 +1,32 @@
+{
+  "nav": {
+    "features": "功能",
+    "levels": "HSK 等级",
+    "signIn": "登录",
+    "getStarted": "开始学习"
+  },
+  "hero": {
+    "badge": "HSK 1–6 · 超过10,000名学员",
+    "headline1": "开启你的",
+    "headline2": "中文之路",
+    "headline3": "从这里出发。",
+    "sub": "专为HSK考试打造的游戏化学习平台。",
+    "cta": "免费开始学习",
+    "exploreLevels": "探索HSK等级"
+  },
+  "auth": {
+    "signIn": "登录",
+    "signUp": "创建账户",
+    "email": "电子邮件",
+    "password": "密码",
+    "name": "姓名",
+    "forgotPassword": "忘记密码？",
+    "continueGoogle": "使用Google账号继续",
+    "noAccount": "还没有账户？",
+    "hasAccount": "已有账户？"
+  },
+  "dashboard": {
+    "greeting": "早上好",
+    "streak": "你已连续学习{n}天，继续加油！"
+  }
+}

@@ -1,1 +1,32 @@
-
+{
+  "nav": {
+    "features": "Features",
+    "levels": "HSK Levels",
+    "signIn": "Sign In",
+    "getStarted": "Get Started"
+  },
+  "hero": {
+    "badge": "HSK 1 – 6 · 10,000+ learners",
+    "headline1": "Your path to",
+    "headline2": "Chinese fluency",
+    "headline3": "starts here.",
+    "sub": "A Duolingo-style platform crafted for HSK mastery.",
+    "cta": "Start Learning — It's Free",
+    "exploreLevels": "Explore HSK Levels"
+  },
+  "auth": {
+    "signIn": "Sign in",
+    "signUp": "Create account",
+    "email": "Email",
+    "password": "Password",
+    "name": "Full Name",
+    "forgotPassword": "Forgot password?",
+    "continueGoogle": "Continue with Google",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have one?"
+  },
+  "dashboard": {
+    "greeting": "Good morning",
+    "streak": "You're on a {n}-day streak. Don't break it!"
+  }
+}
