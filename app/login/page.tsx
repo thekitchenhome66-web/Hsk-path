@@ -2,18 +2,37 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { supabase } from "@/lib/supabaseClient";
 
 export default function LoginPage() {
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1200));
-    setLoading(false);
-    window.location.href = "/dashboard";
+    setError(null);
+
+    const { error: authError } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
+
+    if (authError) {
+      setError(
+        authError.message === "Invalid login credentials"
+          ? "Incorrect email or password. Please try again."
+          : authError.message
+      );
+      setLoading(false);
+      return;
+    }
+
+    router.push("/dashboard");
   };
 
   return (
@@ -45,6 +64,12 @@ export default function LoginPage() {
             Don&apos;t have an account?{" "}
             <Link href="/signup" className="text-vermilion hover:underline font-medium">Sign up free</Link>
           </p>
+
+          {error && (
+            <div className="bg-red-950/50 border border-red-800/60 text-red-300 font-body text-sm px-4 py-3 rounded-sm mb-5">
+              {error}
+            </div>
+          )}
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
