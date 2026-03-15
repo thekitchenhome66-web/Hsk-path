@@ -52,7 +52,9 @@ function getCompletedDays(streak: number): number[] {
 // ─── Server Component ─────────────────────────────────────────────────────────
 
 export default async function DashboardPage() {
-  const supabase = createServerComponentClient({ cookies });
+  const supabase = createServerComponentClient({
+  cookies: () => cookies(),
+});
 
   // 1. Get authenticated user — redirect to login if not signed in
   const {
